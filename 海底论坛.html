@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+    <head>
+        <meta charset = "utf-8" />
+
+        <style>
+            body{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: rgb(117, 113, 113);
+                color: white;
+            }
+            #main{
+                flex: 1;
+                width: 60%;
+            }
+            #typing{
+                flex: 1;
+                width: 60%;
+                height: 20vh;
+                border: red;
+                font-size:xx-large;
+            }
+            #commend{
+                flex: 1;
+                width: 80%;
+            }
+            #btn{
+                background-color: red;
+            }
+            p{
+                background-color:black;
+            }
+        .style1 {
+				font-family: 华文隶书;
+				font-size: 50pt;
+}
+        </style>
+
+    	<title>海底论坛</title>
+
+    </head>
+
+    <body>
+        <div id="main">
+            <h1 class="style1">海底论坛</h1><hr>
+            <textarea id="typing">输入文字</textarea>
+            <button id="btn">发送评论</button>
+            <div style="position: absolute; width: 351px; height: 194px; z-index: 1; left: 673px; top: 13px" id="layer1">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<br />
+							<br />
+							<br />
+							<br />
+							<br />
+							<br />
+							<br />
+							<br />
+							<br />
+							<a href="index.html">返回</a></div>
+			<div id="commend">
+			</div>
+        </div>
+    </body>
+
+    <script>
+        document.getElementById("btn").onclick=function(){send()};
+        function send(){
+            var g=new Date();
+            var value= document.getElementById("typing").value;
+            var p= document.createElement("p");
+            p.innerHTML="用户："+value+'<hr>'+g.toUTCString();
+            document.getElementById("commend").prepend(p);
+        }
+    </script>
+</html>
