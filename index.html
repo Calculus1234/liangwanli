@@ -112,7 +112,7 @@ a {
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 				纵观人类发展历程，人们总在往天上看，却不常看向深远的海底，海底世界仍向我们披着神秘的面纱。亚特兰蒂斯是否真的存在，深海的动物也有好坏，在人类尚未涉足北极时，尼摩船长已经带着他的鹦鹉螺号满世界的转，走进《海底两万里》，一起探索水下的奥秘。</div>
 
-<div style="position: absolute; width: 810px; height: 575px; z-index: 3; left: 300px; top: 10px" id="layer5" class="style32">
+<div style="position: absolute; width: 810px; height: 188px; z-index: 3; left: 300px; top: 10px" id="layer5" class="style32">
   <p>一游至深之处<br />
   &nbsp;&nbsp;&nbsp; ——海底两万里<br />
     <br />
@@ -126,14 +126,54 @@ a {
   <br />
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
 </div>
-	<div style="position: absolute; width: 717px; height: 271px; z-index: 3; left: 312px; top: 225px" id="marquee" class="style32">
-		<marquee>
-		<a href="海底微世界博览会欢迎界面.html"><img src="海底两万里4.jpg" alt="" width="717" height="271" class="img"></a>
-		<a href="第20000号放映室欢迎界面.html"><img src="海底两万里6.jpg" alt="" width="717" height="271" class="img"></a>
-        <a href="游戏棋研发制作厅欢迎界面.html"><img src="海底两万里5.jpg" alt="" width="717" height="271" class="img"></a>
-        <a href="两万里评书.html"><img src="海底两万里1.jpg" alt="" width="717" height="271" class="img"></a>
-        <a href="海底论坛.html"><img src="海底两万里11.jpg" alt="" width="717" height="271" class="img"></a>
-		</marquee>
+	<div style="position: absolute; width: 827px; height: 271px; z-index: 3; left: 299px; top: 111px" id="marquee" class="style24">
+		<style>
+			 * {
+        padding: 0;
+        margin: 0;
+      }
+    .img{
+        width:300px;
+        height:300px;
+    }
+    .box{
+        position: absolute;
+        margin: 100px auto;
+        width:800px;
+        height:300px;
+        border: 2px solid black;
+        border-radius: 10%;
+        box-shadow: 2px 5px 15px;
+        overflow: hidden;
+    }
+li{
+        float:left;
+    }
+			 @keyframes move{
+        to{
+            transform: translateX(-1400px);
+            /* 注意是负的，要回走 ,而且是7张，不是10张的长度*/
+        }
+    }
+			.box ul{
+        width:2300px;
+        list-style: none;
+        /* 这里的animation属性是关键，调用创建的动画 */
+        animation: move 10s linear infinite backwards;
+    }
+			.box:hover ul{
+        animation-play-state: paused;
+    }
+		</style>
+		<div class="box">
+        <ul>
+        <a href="海底微世界博览会欢迎界面.html"><li><img src="海底两万里4.jpg" alt="" width="1" height="1" class="img"></li></a>
+		<a href="第20000号放映室欢迎界面.html"><li><img src="海底两万里6.jpg" alt="" width="1" height="1" class="img"></li></a>
+        <a href="游戏棋研发制作厅欢迎界面.html"><li><img src="海底两万里5.jpg" alt="" width="1" height="1" class="img"></li></a>
+        <a href="两万里评书.html"><li><img src="海底两万里1.jpg" alt="" width="1" height="1" class="img"></li></a>
+        <a href="海底论坛.html"><li><img src="海底两万里11.jpg" alt="" width="1" height="1" class="img"></li></a>
+        </ul>
+    </div>
 	</div>
 	<div style="position: absolute; width: 445px; height: 48px; z-index: 3; left: 627px; top: 519px" id="layer6" class="style31">原著作者：儒勒·凡尔纳</div>
 </body>
