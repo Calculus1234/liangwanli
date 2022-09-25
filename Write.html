@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>海底论坛</title>
+<style type="text/css">
+.style1 {
+				font-family: 华文隶书;
+				font-size: 50pt;
+}
+</style>
+</head>
+<h1 style="style1">海底论坛</h1>
+<body>
+<input type="text">
+<input type="button" name="sub" id="sub" value="提交">
+<script type="">
+include "Link.php"; //引用连接数据库的php文件
+
+if(!empty($_POST["sub"])){ //判断是否按下发表留言按钮
+
+$text=$_POST["text"]; //把提交的text的内容放在此处定义的$text
+
+$sql="INSERT into `wordlist` (`id`,`num`,``) values ('','" . $text . "') "; //sql添加到数据库语句
+
+mysqli_query($links, $sql);
+
+echo "发表成功！"; //输出发表成功
+
+}
+
+?></script>
+<span><a href="index.html">返回</a></span>
+<p>评论列表：</p>
+<script type="">
+include "Link.php"; //连接数据库
+
+$sql = "select * from `text`"; //sql查找数据库中的所有信息
+
+$query = mysqli_query($links,$sql); //获取所有的数据库信息，但是是二进制
+
+while($news=mysqli_fetch_array($query)) { //$news 获取的是$query中的一条信息，并将这条信息转换为数组的形式
+
+?>
+
+} //循环到此为止，上侧是html代码，每将一条信息转换为数组，循环输出一次【php和html嵌套】
+
+?></script>
+	
+	
+</body>
+</html>
